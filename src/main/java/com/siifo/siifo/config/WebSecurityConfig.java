@@ -24,6 +24,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests(requests -> requests
+                        .antMatchers("/static/**").permitAll()
                         .antMatchers(resources).permitAll()
                         .antMatchers("/", "/index", "/contacto", "/sonido", "/banquetes", "/recreacion", "/colegios", "/recreacion/ferias", "/recreacion/decoraciones", "/recreacion/baby_shower", "/recreacion/recreacion_infantil", "/recreacion/minitks", "/recreacion/refrigerios", "/recreacion/talleres_ludicos", "/recreacion/saltarines", "/colegios/chaquetas_prom", "/colegios/jean_day", "/colegios/dia_del_nino", "/colegios/fiestas_prom" ).permitAll()
                         .antMatchers("/admin*").hasRole("ADMIN")
