@@ -21,7 +21,7 @@ import com.siifo.siifo.service.UsuarioService;
 public class AdminController {
 	//logistica
 	@Autowired
-	public UsuarioService serviceUsuario;
+	public UsuarioService UsuarioService;
 
 	//inventario
     @Autowired
@@ -46,7 +46,7 @@ public class AdminController {
 	//logistica
 	@PostMapping("/registerUsuario")
 	public String registroUsuarios(@Validated Usuario usuario, Model model){
-		serviceUsuario.saveOrUpdate(usuario);
+		UsuarioService.saveOrUpdateUsuario(usuario);
 		return "redirect:/admin";
 	}
 

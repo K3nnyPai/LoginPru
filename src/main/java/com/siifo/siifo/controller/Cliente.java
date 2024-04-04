@@ -122,9 +122,4 @@ public class Cliente {
 	public String fiestas_prom() {
 		return "fiestas_prom";
 	}
-
-	
-	
-	
-	
 }

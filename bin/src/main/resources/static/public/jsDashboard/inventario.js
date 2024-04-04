@@ -16,7 +16,7 @@ registrarProducto.addEventListener("click", function mostrarFormulario() {
     <div class="col-12 col-sm-7 col-md-6 m-auto">
       <div class="card border-0 shadow">
         <div class="card-body">
-          <form action="administrador" method="POST">
+          <form action="register" method="POST">
             <h2 class="text-center mb-5">Registrar Producto</h2>
             <label for="nombreProducto">Nombre de tu producto</label>
             <input type="text" name="nombreProducto" id="nombreProducto" class="form-control my-4 py-2" placeholder="Reflectores" required/>
@@ -25,7 +25,7 @@ registrarProducto.addEventListener("click", function mostrarFormulario() {
             <label for="precioProducto">Precio Compra</label>
             <input type="number" name="precioProducto" id="precioProducto" class="form-control my-4 py-2" placeholder="000075" required/>
             <label for="categoria">Selecciona la categoria</label>
-            <select id="categoria" name="categorias" required>
+            <select id="categoria" name="categoria" required>
               <option value="" disabled >seleccione</option>
               <option value="Luces">Luces</option>
               <option value="Sonido">Sonido</option>
@@ -36,10 +36,9 @@ registrarProducto.addEventListener("click", function mostrarFormulario() {
             <br>  
             <label for="fecha">fecha</label>
             <input type="date" name="fecha" id="fecha" class="form-control my-4 py-2" placeholder="" />
-            <label for="nombreProducto">Proveedor</label>
-            <input type="text" name="" id="provedor" class="form-control my-4 py-2" placeholder="John Angulo" />
-            <div class="text-center mt-3">
-              <button class="btn btn-primary">Registrar</button>
+            
+			<div class="text-center mt-3">
+              <button type="submit" class="btn btn-primary">Registrar</button>
             </div>
           </form>
         </div>
